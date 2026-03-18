@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://polinodes-api.12344man.dev/api/:path*"
+      "destination": "https://polinodes-810111548500.northamerica-northeast2.run.app/api/:path*"
     }
   ]
 }
