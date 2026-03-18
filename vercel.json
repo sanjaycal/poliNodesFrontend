@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://polinodes-api.12344man.dev/:path*"
+      "destination": "https://polinodes-api.12344man.dev/api/:path*"
     }
   ]
 }
