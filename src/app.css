@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  color: #e2e8f0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: #2d3748;
+  color: white;
+  border: 1px solid #4a5568;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #4a5568;
+}
+
+select {
+  background: #2d3748;
+  color: white;
+  border: 1px solid #4a5568;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
