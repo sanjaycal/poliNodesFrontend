@@ -129,14 +129,12 @@
                                                     -graphState.transform.x /
                                                         graphState.transform
                                                             .scale +
-                                                        100,
+                                                        300/graphState.transform.scale + Math.random()*50/graphState.transform.scale,
                                                     -graphState.transform.y /
                                                         graphState.transform
                                                             .scale +
-                                                        100,
+                                                        300/graphState.transform.scale + Math.random()*50/graphState.transform.scale,
                                                 );
-                                                showAddMenu = false;
-                                                expandedCategory = null;
                                             }}
                                         >
                                             {config.title}

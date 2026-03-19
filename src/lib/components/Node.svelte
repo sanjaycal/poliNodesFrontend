@@ -20,6 +20,11 @@
         if (type === "output") {
             graphState.isCreatingEdge = true;
             graphState.edgeStart = { nodeId: node.id, socketIdx: index };
+        } if (type === "input") {
+            let selectedEdge = graphState.edges.filter(e => e.toNode===node.id && e.toSocket===index)[0];
+            graphState.removeEdge(selectedEdge.id);
+            graphState.isCreatingEdge = true;
+            graphState.edgeStart = {nodeId: selectedEdge.fromNode, socketIdx: selectedEdge.fromSocket}
         }
     }
 
