@@ -76,6 +76,8 @@ export const NODE_TYPES_CONFIG: Record<string, { title: string, inputTypes: stri
     'multiplyNode': { title: 'Multiply', inputTypes: ['FLOAT', 'FLOAT'], outputTypes: ['FLOAT'], inputLabels: ['A', 'B'], outputLabels: ['Result'], color: '#4299e1', defaultWidth: 150 },
     'divideNode': { title: 'Divide', inputTypes: ['FLOAT', 'FLOAT'], outputTypes: ['FLOAT'], inputLabels: ['A', 'B'], outputLabels: ['Result'], color: '#4299e1', defaultWidth: 150 },
     'collateVotesNode': { title: 'Collate Votes', inputTypes: ['VOTECOUNTRIDINGTABLE'], outputTypes: ['COLLATEDVOTETABLE'], inputLabels: ['Table'], outputLabels: ['Votes'], color: '#805ad5', defaultWidth: 180 },
+    'convertToPercentagesRidingNode': {title: 'Convert Riding Table To Percentages', inputTypes: ['VOTECOUNTRIDINGTABLE'], outputTypes: ['RIDINGPERCENTAGETABLE'], inputLabels: ['Riding Vote Count Table'], outputLabels: ['Percentages Table'], color: '#dd6b20', defaultWidth: 200},
+    'convertToPercentagesCollatedNode': {title: 'Convert Collated Table To Percentages', inputTypes: ['COLLATEDVOTETABLE'], outputTypes: ['COLLATEDPERCENTAGETABLE'], inputLabels: ['Collated Vote Count Table'], outputLabels: ['Percentages Table'], color: '#dd6b20', defaultWidth: 200},
     'partyNode': { title: 'Party Name', inputTypes: [], outputTypes: ['PARTY'], inputLabels: [], outputLabels: ['Party'], color: '#9f7aea', defaultWidth: 200 },
     'noteNode': { title: 'Note', inputTypes: [], outputTypes: [], inputLabels: [], outputLabels: [], color: '#ecc94b', defaultWidth: 250 },
     'extractCollatedNode': { title: 'Extract Value', inputTypes: ['ANYTABLE', 'PARTY'], outputTypes: ['FLOAT'], inputLabels: ['Table', 'Party'], outputLabels: ['Count'], color: '#f56565', defaultWidth: 180 },

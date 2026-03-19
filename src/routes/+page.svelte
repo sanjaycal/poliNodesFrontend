@@ -20,6 +20,8 @@
             "collateWinnersNode",
             "collateVotesNode",
             "extractCollatedNode",
+            "convertToPercentagesRidingNode",
+            "convertToPercentagesCollatedNode",
         ],
         Math: ["addNode", "subtractNode", "multiplyNode", "divideNode"],
         Swings: ["uniformSwingNode", "proportionalSwingNode"],
