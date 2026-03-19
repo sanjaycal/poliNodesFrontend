@@ -192,7 +192,7 @@
     .close-btn {
         cursor: pointer;
         padding: 0 4px;
-        border-radius: 3px;
+        border-radius: 0px;
     }
     .close-btn:hover {
         background: rgba(0, 0, 0, 0.2);
@@ -351,8 +351,8 @@
 
     .node-result {
         background: #fff;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         padding: 5px;
     }
 

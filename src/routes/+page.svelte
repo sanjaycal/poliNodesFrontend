@@ -221,7 +221,7 @@
         margin-top: 18px;
         background: #2d3748;
         border: 1px solid #4a5568;
-        border-radius: 4px;
+        border-radius: 0px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         min-width: 200px;
         z-index: 100;
