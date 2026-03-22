@@ -25,7 +25,7 @@
         ],
         Math: ["addNode", "subtractNode", "multiplyNode", "divideNode"],
         Swings: ["uniformSwingNode", "proportionalSwingNode"],
-        Filters: ["filterProvinceNode"],
+        Filters: ["filterProvinceNode", "filterPartyNode"],
         Combine: ["mergeTablesNode", "mixVoteCountTableNode"],
         Outputs: ["barChartNode", "tableViewNode", "floatDisplayNode"],
     };

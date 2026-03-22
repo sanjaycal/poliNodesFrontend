@@ -110,7 +110,7 @@
                 <div class="socket-wrapper">
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
                     <div
-                        class="socket input-socket shape-{sType}"
+                        class="socket input-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('ANYTABLE')) ? 'input-collated-socket' : ''}"
                         data-node-id={node.id}
                         data-socket-idx={i}
                         data-socket-type="input"
@@ -134,7 +134,7 @@
                     >
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
                     <div
-                        class="socket output-socket shape-{sType}"
+                        class="socket output-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('ANYTABLE')) ? 'output-collated-socket' : ''}"
                         data-node-id={node.id}
                         data-socket-idx={i}
                         data-socket-type="output"
@@ -209,7 +209,7 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        justify-content: center;
+        justify-content: top;
     }
 
     .socket-wrapper {
@@ -222,9 +222,7 @@
     .socket {
         width: 12px;
         height: 12px;
-        border-radius: 50%;
         background: #cbd5e0;
-        border: 2px solid #2d3748;
         cursor: crosshair;
         position: absolute;
         transition:
@@ -234,7 +232,6 @@
 
     .socket:hover {
         transform: scale(1.3);
-        background: #fff;
     }
 
     .input-socket {
@@ -263,9 +260,21 @@
         margin-right: 12px;
     }
 
+    .output-collated-socket {
+        right: -12px;
+    }
+
+    .input-collated-socket {
+        left: -12px;
+    }
+
     /* Socket Shapes */
     .shape-FLOAT {
-        border-radius: 50%;
+        clip-path: polygon(33% 0%, 66% 0%, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0% 66%, 0% 33%, 33% 33%);
+    }
+    .shape-FLOATRIDINGTABLE {
+        clip-path: polygon(33% 0%, 66% 0%, 66% 16%, 100% 16%, 100% 74%, 66% 74%, 66% 100%, 33% 100%, 33% 74%, 0% 66%, 0% 16%, 33% 16%);
+        height: 24px;
     }
     .shape-PROVINCE {
         border-radius: 3px;
@@ -273,6 +282,13 @@
     }
     .shape-VOTECOUNTRIDINGTABLE {
         border-radius: 0;
+        height: 24px;
+        background: LightBlue;
+    }
+    .shape-COLLATEDVOTETABLE {
+        border-radius: 0;
+        width: 24px;
+        background: LightBlue;
     }
     .shape-RIDINGWINNERTABLE {
         border-radius: 0;
@@ -281,25 +297,42 @@
     .shape-RIDINGWINNERTABLE:hover {
         transform: rotate(45deg) scale(1.3);
     }
+
     .shape-COLLATEDSEATSTABLE {
         border-radius: 0;
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
+
     .shape-PARTY {
-        border-radius: 0;
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+        background: LightGreen;
     }
+
+    .shape-RIDINGPARTYTABLE {
+        clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
+        height: 24px;
+        background: LightGreen;
+    }
+
+    .shape-COLLATEDPARTYTABLE {
+        clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+        width: 24px;
+        background: LightGreen;
+    }
+
     .shape-ANYTABLE {
         border-radius: 5px;
-        background: repeating-linear-gradient(45deg, #cbd5e0, #cbd5e0 2px, #4a5568 2px, #4a5568 4px);
+        width: 24px;
+        height: 24px;
     }
+
     .shape-ANYRIDINGTABLE {
         border-radius: 5px;
-        background: repeating-linear-gradient(45deg, #fbd38d, #fbd38d 2px, #dd6b20 2px, #dd6b20 4px);
+        height: 24px;
     }
     .shape-ANYCOLLATEDTABLE {
         border-radius: 5px;
-        background: repeating-linear-gradient(45deg, #d6bcfa, #d6bcfa 2px, #805ad5 2px, #805ad5 4px);
+        width: 24px;
     }
     .shape-IMAGE {
         border-radius: 0;
