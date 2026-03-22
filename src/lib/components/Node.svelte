@@ -110,7 +110,7 @@
                 <div class="socket-wrapper">
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
                     <div
-                        class="socket input-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('ANYTABLE')) ? 'input-collated-socket' : ''}"
+                        class="socket input-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('TABLE_ANY')) ? 'input-collated-socket' : ''}"
                         data-node-id={node.id}
                         data-socket-idx={i}
                         data-socket-type="input"
@@ -134,7 +134,7 @@
                     >
                     <!-- svelte-ignore a11y_no_static_element_interactions -->
                     <div
-                        class="socket output-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('ANYTABLE')) ? 'output-collated-socket' : ''}"
+                        class="socket output-socket shape-{sType} {(sType.includes('COLLATED') || sType.includes('TABLE_ANY')) ? 'output-collated-socket' : ''}"
                         data-node-id={node.id}
                         data-socket-idx={i}
                         data-socket-type="output"
@@ -272,35 +272,20 @@
     .shape-FLOAT {
         clip-path: polygon(33% 0%, 66% 0%, 66% 33%, 100% 33%, 100% 66%, 66% 66%, 66% 100%, 33% 100%, 33% 66%, 0% 66%, 0% 33%, 33% 33%);
     }
-    .shape-FLOATRIDINGTABLE {
+
+    .shape-TABLE_RIDING_ONE_FLOAT {
         clip-path: polygon(33% 0%, 66% 0%, 66% 16%, 100% 16%, 100% 74%, 66% 74%, 66% 100%, 33% 100%, 33% 74%, 0% 66%, 0% 16%, 33% 16%);
         height: 24px;
     }
+
     .shape-PROVINCE {
         border-radius: 3px;
         transform: rotate(45deg);
     }
-    .shape-VOTECOUNTRIDINGTABLE {
+    .shape-TABLE_RIDING_PARTY_FLOAT {
         border-radius: 0;
         height: 24px;
         background: LightBlue;
-    }
-    .shape-COLLATEDVOTETABLE {
-        border-radius: 0;
-        width: 24px;
-        background: LightBlue;
-    }
-    .shape-RIDINGWINNERTABLE {
-        border-radius: 0;
-        transform: rotate(45deg);
-    }
-    .shape-RIDINGWINNERTABLE:hover {
-        transform: rotate(45deg) scale(1.3);
-    }
-
-    .shape-COLLATEDSEATSTABLE {
-        border-radius: 0;
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     }
 
     .shape-PARTY {
@@ -308,29 +293,29 @@
         background: LightGreen;
     }
 
-    .shape-RIDINGPARTYTABLE {
+    .shape-TABLE_RIDING_ONE_PARTY {
         clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0% 100%, 0% 50%);
         height: 24px;
         background: LightGreen;
     }
 
-    .shape-COLLATEDPARTYTABLE {
+    .shape-TABLE_COLLATED_PARTY_FLOAT {
         clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
         width: 24px;
         background: LightGreen;
     }
 
-    .shape-ANYTABLE {
+    .shape-TABLE_ANY {
         border-radius: 5px;
         width: 24px;
         height: 24px;
     }
 
-    .shape-ANYRIDINGTABLE {
+    .shape-TABLE_RIDING_ANY {
         border-radius: 5px;
         height: 24px;
     }
-    .shape-ANYCOLLATEDTABLE {
+    .shape-TABLE_COLLATED_ANY {
         border-radius: 5px;
         width: 24px;
     }

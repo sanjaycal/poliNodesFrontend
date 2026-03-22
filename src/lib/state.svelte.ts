@@ -64,19 +64,19 @@ export class GraphState {
         if (outType !== inType) {
             // Allow ANY variant inputs to accept corresponding outputs
             let isAllowed = false;
-            if (inType === 'ANYTABLE' && outType.includes('TABLE')) {
+            if (inType === 'TABLE_ANY' && outType.includes('TABLE')) {
                 isAllowed = true;
-            } else if (inType === 'ANYCOLLATEDTABLE' && outType.includes('COLLATED')) {
+            } else if (inType === 'TABLE_COLLATED_ANY' && outType.includes('COLLATED')) {
                 isAllowed = true;
-            } else if (inType === 'ANYRIDINGTABLE' && outType.includes('RIDING')) {
+            } else if (inType === 'TABLE_RIDING_ANY' && outType.includes('RIDING')) {
                 isAllowed = true;
             }
             
             // Also allow ANY outputs to feed into specific inputs if we are optimistic
             // (e.g., ANYRIDINGTABLE feeding into VOTECOUNTRIDINGTABLE)
-            if (outType === 'ANYTABLE' && inType.includes('TABLE')) isAllowed = true;
-            if (outType === 'ANYCOLLATEDTABLE' && inType.includes('COLLATED')) isAllowed = true;
-            if (outType === 'ANYRIDINGTABLE' && inType.includes('RIDING')) isAllowed = true;
+            if (outType === 'TABLE_ANY' && inType.includes('TABLE')) isAllowed = true;
+            if (outType === 'TABLE_COLLATED_ANY' && inType.includes('COLLATED')) isAllowed = true;
+            if (outType === 'TABLE_RIDING_ANY' && inType.includes('RIDING')) isAllowed = true;
 
             if (!isAllowed) {
                 console.warn(`Cannot connect ${outType} to ${inType}`);
