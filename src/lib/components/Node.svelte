@@ -376,7 +376,7 @@
 
     .result-scrollbox {
         overflow: auto;
-        max-height: 400px;
+        max-height: 250px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;

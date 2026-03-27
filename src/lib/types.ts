@@ -60,7 +60,7 @@ export const PARTIES = [
 
 export const NODE_TYPES_CONFIG: Record<string, { title: string, inputTypes: string[], outputTypes: string[], inputLabels: string[], outputLabels: string[], color: string, defaultWidth: number }> = {
     'floatNode': { title: 'Float Value', inputTypes: [], outputTypes: ['FLOAT'], inputLabels: [], outputLabels: ['Value'], color: '#a0aec0', defaultWidth: 150 },
-    'dataSourceNode': { title: 'Data Source', inputTypes: [], outputTypes: ['TABLE_RIDING_PARTY_FLOAT'], inputLabels: [], outputLabels: ['Table'], color: '#3182ce', defaultWidth: 180 },
+    'dataSourceNode': { title: 'Federal Election 2025', inputTypes: [], outputTypes: ['TABLE_RIDING_PARTY_FLOAT'], inputLabels: [], outputLabels: ['Table'], color: '#3182ce', defaultWidth: 180 },
     'findWinnerNode': { title: 'Find Winner', inputTypes: ['TABLE_RIDING_PARTY_FLOAT'], outputTypes: ['TABLE_RIDING_ONE_PARTY'], inputLabels: ['Table'], outputLabels: ['Winners'], color: '#dd6b20', defaultWidth: 180 },
     'collateWinnersNode': { title: 'Collate Winners', inputTypes: ['TABLE_RIDING_ONE_PARTY'], outputTypes: ['TABLE_COLLATED_PARTY_FLOAT'], inputLabels: ['Winners'], outputLabels: ['Seats'], color: '#805ad5', defaultWidth: 180 },
     'barChartNode': { title: 'Bar Chart', inputTypes: ['TABLE_COLLATED_ANY'], outputTypes: ['IMAGE'], inputLabels: ['Table'], outputLabels: ['Chart'], color: '#38a169', defaultWidth: 400 },
