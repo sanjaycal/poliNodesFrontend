@@ -1,0 +1,359 @@
+{
+  "nodes": [
+    {
+      "id": "node_st7pbe9",
+      "type": "dataSourceNode",
+      "x": 308.45306300430923,
+      "y": 294.13468817640194,
+      "width": 180,
+      "title": "Federal Election 2025",
+      "inputTypes": [],
+      "outputTypes": [
+        "TABLE_RIDING_PARTY_FLOAT"
+      ],
+      "inputLabels": [],
+      "outputLabels": [
+        "Table"
+      ],
+      "color": "#3182ce",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_6yle5fv",
+      "type": "findWinnerNode",
+      "x": 668.9089233756515,
+      "y": 310.42715574868566,
+      "width": 180,
+      "title": "Find Winner",
+      "inputTypes": [
+        "TABLE_RIDING_PARTY_FLOAT"
+      ],
+      "outputTypes": [
+        "TABLE_RIDING_ONE_PARTY"
+      ],
+      "inputLabels": [
+        "Table"
+      ],
+      "outputLabels": [
+        "Winners"
+      ],
+      "color": "#dd6b20",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_flqsf2w",
+      "type": "uniformSwingNode",
+      "x": 656.2368176616583,
+      "y": 481.8540184293382,
+      "width": 200,
+      "title": "Uniform Swing",
+      "inputTypes": [
+        "TABLE_RIDING_PARTY_FLOAT",
+        "FLOAT",
+        "FLOAT",
+        "FLOAT",
+        "FLOAT",
+        "FLOAT"
+      ],
+      "outputTypes": [
+        "TABLE_RIDING_PARTY_FLOAT"
+      ],
+      "inputLabels": [
+        "Table",
+        "Liberal",
+        "Conservative",
+        "NDP",
+        "Bloc",
+        "Green"
+      ],
+      "outputLabels": [
+        "Table"
+      ],
+      "color": "#e53e3e",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_xayqf5e",
+      "type": "floatNode",
+      "x": 308.41930107324595,
+      "y": 507.1260426890244,
+      "width": 150,
+      "title": "Float Value",
+      "inputTypes": [],
+      "outputTypes": [
+        "FLOAT"
+      ],
+      "inputLabels": [],
+      "outputLabels": [
+        "Value"
+      ],
+      "color": "#a0aec0",
+      "resultHTML": "",
+      "attrs": {
+        "value": "5"
+      }
+    },
+    {
+      "id": "node_awc7sfg",
+      "type": "floatNode",
+      "x": 309.09602717418994,
+      "y": 663.9560730189742,
+      "width": 150,
+      "title": "Float Value",
+      "inputTypes": [],
+      "outputTypes": [
+        "FLOAT"
+      ],
+      "inputLabels": [],
+      "outputLabels": [
+        "Value"
+      ],
+      "color": "#a0aec0",
+      "resultHTML": "",
+      "attrs": {
+        "value": "-1"
+      }
+    },
+    {
+      "id": "node_yhqba1c",
+      "type": "floatNode",
+      "x": 309.34076366319323,
+      "y": 583.2744491910048,
+      "width": 150,
+      "title": "Float Value",
+      "inputTypes": [],
+      "outputTypes": [
+        "FLOAT"
+      ],
+      "inputLabels": [],
+      "outputLabels": [
+        "Value"
+      ],
+      "color": "#a0aec0",
+      "resultHTML": "",
+      "attrs": {
+        "value": "-4"
+      }
+    },
+    {
+      "id": "node_f96vo0s",
+      "type": "findWinnerNode",
+      "x": 982.7448280559297,
+      "y": 483.14336547827276,
+      "width": 180,
+      "title": "Find Winner",
+      "inputTypes": [
+        "TABLE_RIDING_PARTY_FLOAT"
+      ],
+      "outputTypes": [
+        "TABLE_RIDING_ONE_PARTY"
+      ],
+      "inputLabels": [
+        "Table"
+      ],
+      "outputLabels": [
+        "Winners"
+      ],
+      "color": "#dd6b20",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_jux8w2j",
+      "type": "collateWinnersNode",
+      "x": 1272.8771974422243,
+      "y": 481.1834403731986,
+      "width": 180,
+      "title": "Collate Winners",
+      "inputTypes": [
+        "TABLE_RIDING_ONE_PARTY"
+      ],
+      "outputTypes": [
+        "TABLE_COLLATED_PARTY_FLOAT"
+      ],
+      "inputLabels": [
+        "Winners"
+      ],
+      "outputLabels": [
+        "Seats"
+      ],
+      "color": "#805ad5",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_b2n9tl8",
+      "type": "collateWinnersNode",
+      "x": 988.0883889477373,
+      "y": 306.21190953095476,
+      "width": 180,
+      "title": "Collate Winners",
+      "inputTypes": [
+        "TABLE_RIDING_ONE_PARTY"
+      ],
+      "outputTypes": [
+        "TABLE_COLLATED_PARTY_FLOAT"
+      ],
+      "inputLabels": [
+        "Winners"
+      ],
+      "outputLabels": [
+        "Seats"
+      ],
+      "color": "#805ad5",
+      "resultHTML": "",
+      "attrs": {}
+    },
+    {
+      "id": "node_ys24ibo",
+      "type": "tableViewNode",
+      "x": 1580.3796372018762,
+      "y": 479.66765411671366,
+      "width": 400,
+      "title": "Table View",
+      "inputTypes": [
+        "TABLE_ANY"
+      ],
+      "outputTypes": [
+        "IMAGE"
+      ],
+      "inputLabels": [
+        "Table"
+      ],
+      "outputLabels": [
+        "View"
+      ],
+      "color": "#718096",
+      "resultHTML": "<table style=\"width:100%; border-collapse: collapse; font-size: 0.8rem; background: white; color: black;\"><tr style=\"border-bottom: 2px solid #cbd5e0; background: #edf2f7;\"><th style=\"text-align: left; padding: 6px;\">Party</th><th style=\"text-align: right; padding: 6px;\">Total</th></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Liberal/Libéral</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">222</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #f7fafc;\"><td style=\"padding: 6px;\">Conservative/Conservateur</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">96</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Bloc Québécois/Bloc Québécois</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">20</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #f7fafc;\"><td style=\"padding: 6px;\">NDP-New Democratic Party/NPD-Nouveau Parti démocratique</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">4</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Green Party/Parti Vert</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">1</td></tr></table>",
+      "attrs": {}
+    },
+    {
+      "id": "node_9a7ur5u",
+      "type": "tableViewNode",
+      "x": 1273.05519442582,
+      "y": 178.91607600831065,
+      "width": 400,
+      "title": "Table View",
+      "inputTypes": [
+        "TABLE_ANY"
+      ],
+      "outputTypes": [
+        "IMAGE"
+      ],
+      "inputLabels": [
+        "Table"
+      ],
+      "outputLabels": [
+        "View"
+      ],
+      "color": "#718096",
+      "resultHTML": "<table style=\"width:100%; border-collapse: collapse; font-size: 0.8rem; background: white; color: black;\"><tr style=\"border-bottom: 2px solid #cbd5e0; background: #edf2f7;\"><th style=\"text-align: left; padding: 6px;\">Party</th><th style=\"text-align: right; padding: 6px;\">Total</th></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Liberal/Libéral</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">169</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #f7fafc;\"><td style=\"padding: 6px;\">Conservative/Conservateur</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">144</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Bloc Québécois/Bloc Québécois</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">22</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #f7fafc;\"><td style=\"padding: 6px;\">NDP-New Democratic Party/NPD-Nouveau Parti démocratique</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">7</td></tr><tr style=\"border-bottom: 1px solid #e2e8f0; background: #ffffff;\"><td style=\"padding: 6px;\">Green Party/Parti Vert</td><td style=\"text-align: right; padding: 6px; font-family: monospace;\">1</td></tr></table>",
+      "attrs": {}
+    },
+    {
+      "id": "node_vjly9wc",
+      "type": "barChartNode",
+      "x": 1592.8055064517284,
+      "y": 778.4856976222045,
+      "width": 400,
+      "title": "Bar Chart",
+      "inputTypes": [
+        "TABLE_COLLATED_ANY"
+      ],
+      "outputTypes": [
+        "IMAGE"
+      ],
+      "inputLabels": [
+        "Table"
+      ],
+      "outputLabels": [
+        "Chart"
+      ],
+      "color": "#38a169",
+      "resultHTML": "<?xml version='1.0' encoding='utf-8'?>\n<svg xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\" id=\"chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4\" class=\"pygal-chart\" viewBox=\"0 0 800 600\"><!--Generated with pygal 3.1.0 (etree) ©Kozea 2012-2025 on 2026-04-04--><!--http://pygal.org--><!--http://github.com/Kozea/pygal--><defs><style type=\"text/css\">#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4{-webkit-user-select:none;-webkit-font-smoothing:antialiased;font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .title{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:16px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .legends .legend text{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:14px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis text{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:10px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis text.major{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:10px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay text.value{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:16px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay text.label{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:10px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:14px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 text.no_data{font-family:Consolas,\"Liberation Mono\",Menlo,Courier,monospace;font-size:64px}\n#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4{background-color:rgba(249,249,249,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 path,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 rect,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 circle{-webkit-transition:150ms;-moz-transition:150ms;transition:150ms}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .graph &gt; .background{fill:rgba(249,249,249,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .plot &gt; .background{fill:rgba(255,255,255,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .graph{fill:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 text.no_data{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .title{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .legends .legend text{fill:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .legends .legend:hover text{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .line{stroke:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .guide.line{stroke:rgba(0,0,0,.54)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .major.line{stroke:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis text.major{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y .guides:hover .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .line-graph .axis.x .guides:hover .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .stackedline-graph .axis.x .guides:hover .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .xy-graph .axis.x .guides:hover .guide.line{stroke:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .guides:hover text{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .reactive{fill-opacity:.7;stroke-opacity:.8;stroke-width:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .ci{stroke:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .reactive.active,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .active .reactive{fill-opacity:.8;stroke-opacity:.9;stroke-width:4}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .ci .reactive.active{stroke-width:1.5}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .series text{fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip rect{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,1);-webkit-transition:opacity 150ms;-moz-transition:opacity 150ms;transition:opacity 150ms}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .label{fill:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .label{fill:rgba(0,0,0,.87)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .legend{font-size:.8em;fill:rgba(0,0,0,.54)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .x_label{font-size:.6em;fill:rgba(0,0,0,1)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .xlink{font-size:.5em;text-decoration:underline}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip .value{font-size:1.5em}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .bound{font-size:.5em}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .max-value{font-size:.75em;fill:rgba(0,0,0,.54)}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .map-element{fill:rgba(255,255,255,1);stroke:rgba(0,0,0,.54) !important}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .map-element .reactive{fill-opacity:inherit;stroke-opacity:inherit}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-0,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-0 a:visited{stroke:#d71920;fill:#d71920}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-1,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-1 a:visited{stroke:#003F72;fill:#003F72}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-2,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-2 a:visited{stroke:#ADD8E6;fill:#ADD8E6}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-3,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-3 a:visited{stroke:#F58220;fill:#F58220}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-4,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .color-4 a:visited{stroke:#24B24A;fill:#24B24A}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay .color-0 text{fill:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay .color-1 text{fill:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay .color-2 text{fill:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay .color-3 text{fill:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .text-overlay .color-4 text{fill:black}\n#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 text.no_data{text-anchor:middle}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .guide.line{fill:none}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .centered{text-anchor:middle}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .title{text-anchor:middle}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .legends .legend text{fill-opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.x text{text-anchor:middle}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.x:not(.web) text[transform]{text-anchor:start}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.x:not(.web) text[transform].backwards{text-anchor:end}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y text{text-anchor:end}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y text[transform].backwards{text-anchor:start}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y2 text{text-anchor:start}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y2 text[transform].backwards{text-anchor:end}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .guide.line{stroke-dasharray:4,4;stroke:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .major.guide.line{stroke-dasharray:6,6;stroke:black}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .horizontal .axis.y .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .horizontal .axis.y2 .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .vertical .axis.x .guide.line{opacity:0}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .horizontal .axis.always_show .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .vertical .axis.always_show .guide.line{opacity:1 !important}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y .guides:hover .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.y2 .guides:hover .guide.line,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis.x .guides:hover .guide.line{opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .axis .guides:hover text{opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .nofill{fill:none}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .subtle-fill{fill-opacity:.2}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .dot{stroke-width:1px;fill-opacity:1;stroke-opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .dot.active{stroke-width:5px}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .dot.negative{fill:transparent}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 text,#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 tspan{stroke:none !important}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .series text.active{opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip rect{fill-opacity:.95;stroke-width:.5}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .tooltip text{fill-opacity:1}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .showable{visibility:hidden}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .showable.shown{visibility:visible}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .gauge-background{fill:rgba(229,229,229,1);stroke:none}#chart-46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4 .bg-lines{stroke:rgba(249,249,249,1);stroke-width:2px}</style><script type=\"text/javascript\">window.pygal = window.pygal || {};window.pygal.config = window.pygal.config || {};window.pygal.config['46d49a6c-65c2-4e6b-abdc-5501ddcdc9b4'] = {\"allow_interruptions\": false, \"box_mode\": \"extremes\", \"classes\": [\"pygal-chart\"], \"css\": [\"file://style.css\", \"file://graph.css\"], \"defs\": [], \"disable_xml_declaration\": false, \"dots_size\": 2.5, \"dynamic_print_values\": false, \"explicit_size\": false, \"fill\": false, \"force_uri_protocol\": \"https\", \"formatter\": null, \"half_pie\": false, \"height\": 600, \"include_x_axis\": false, \"inner_radius\": 0, \"interpolate\": null, \"interpolation_parameters\": {}, \"interpolation_precision\": 250, \"inverse_y_axis\": false, \"js\": [\"//kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js\"], \"legend_at_bottom\": false, \"legend_at_bottom_columns\": null, \"legend_box_size\": 12, \"logarithmic\": false, \"margin\": 20, \"margin_bottom\": null, \"margin_left\": null, \"margin_right\": null, \"margin_top\": null, \"max_scale\": 16, \"min_scale\": 4, \"missing_value_fill_truncation\": \"x\", \"no_data_text\": \"No data\", \"no_prefix\": false, \"order_min\": null, \"pretty_print\": false, \"print_labels\": false, \"print_values\": false, \"print_values_position\": \"center\", \"print_zeroes\": true, \"range\": null, \"reverse_direction\": false, \"rounded_bars\": null, \"secondary_range\": null, \"show_dots\": true, \"show_legend\": true, \"show_minor_x_labels\": true, \"show_minor_y_labels\": true, \"show_only_major_dots\": false, \"show_x_guides\": true, \"show_x_labels\": true, \"show_y_guides\": false, \"show_y_labels\": true, \"spacing\": 10, \"stack_from_top\": false, \"strict\": false, \"stroke\": true, \"stroke_style\": null, \"style\": {\"background\": \"rgba(249, 249, 249, 1)\", \"ci_colors\": [], \"colors\": [\"#d71920\", \"#003F72\", \"#ADD8E6\", \"#F58220\", \"#24B24A\"], \"dot_opacity\": \"1\", \"font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"foreground\": \"rgba(0, 0, 0, .87)\", \"foreground_strong\": \"rgba(0, 0, 0, 1)\", \"foreground_subtle\": \"rgba(0, 0, 0, .54)\", \"guide_stroke_color\": \"black\", \"guide_stroke_dasharray\": \"4,4\", \"label_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"label_font_size\": 10, \"legend_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"legend_font_size\": 14, \"major_guide_stroke_color\": \"black\", \"major_guide_stroke_dasharray\": \"6,6\", \"major_label_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"major_label_font_size\": 10, \"no_data_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"no_data_font_size\": 64, \"opacity\": \".7\", \"opacity_hover\": \".8\", \"plot_background\": \"rgba(255, 255, 255, 1)\", \"stroke_opacity\": \".8\", \"stroke_opacity_hover\": \".9\", \"stroke_width\": \"1\", \"stroke_width_hover\": \"4\", \"title_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"title_font_size\": 16, \"tooltip_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"tooltip_font_size\": 14, \"transition\": \"150ms\", \"value_background\": \"rgba(229, 229, 229, 1)\", \"value_colors\": [], \"value_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"value_font_size\": 16, \"value_label_font_family\": \"Consolas, \\\"Liberation Mono\\\", Menlo, Courier, monospace\", \"value_label_font_size\": 10}, \"title\": null, \"tooltip_border_radius\": 0, \"tooltip_fancy_mode\": true, \"truncate_label\": null, \"truncate_legend\": null, \"width\": 800, \"x_label_rotation\": 0, \"x_labels\": null, \"x_labels_major\": null, \"x_labels_major_count\": null, \"x_labels_major_every\": null, \"x_title\": null, \"xrange\": null, \"y_label_rotation\": 0, \"y_labels\": null, \"y_labels_major\": null, \"y_labels_major_count\": null, \"y_labels_major_every\": null, \"y_title\": null, \"zero\": 0, \"legends\": [\"Liberal/Lib\\u00e9ral\", \"Conservative/Conservateur\", \"Bloc Qu\\u00e9b\\u00e9cois/Bloc Qu\\u00e9b\\u00e9cois\", \"NDP-New Democratic Party/NPD-Nouveau Parti d\\u00e9mocratique\", \"Green Party/Parti Vert\"]}</script><script type=\"text/javascript\" xlink:href=\"https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js\" /></defs><title>Pygal</title><g class=\"graph horizontalbar-graph horizontal\"><rect x=\"0\" y=\"0\" width=\"800\" height=\"600\" class=\"background\" /><g transform=\"translate(168, 20)\" class=\"plot\"><rect x=\"0\" y=\"0\" width=\"612.0\" height=\"540\" class=\"background\" /><g class=\"axis x always_show\"><g class=\"guides\"><path d=\"M11.769231 0.000000 v540.000000\" class=\"axis major line\" /><text x=\"11.76923076923077\" y=\"555.0\" class=\"major\">0</text></g><g class=\"guides\"><path d=\"M64.783784 0.000000 v540.000000\" class=\"guide line\" /><text x=\"64.78378378378379\" y=\"555.0\" class=\"\">20</text></g><g class=\"guides\"><path d=\"M117.798337 0.000000 v540.000000\" class=\"guide line\" /><text x=\"117.79833679833679\" y=\"555.0\" class=\"\">40</text></g><g class=\"guides\"><path d=\"M170.812890 0.000000 v540.000000\" class=\"guide line\" /><text x=\"170.8128898128898\" y=\"555.0\" class=\"\">60</text></g><g class=\"guides\"><path d=\"M223.827443 0.000000 v540.000000\" class=\"guide line\" /><text x=\"223.82744282744284\" y=\"555.0\" class=\"\">80</text></g><g class=\"guides\"><path d=\"M276.841996 0.000000 v540.000000\" class=\"major guide line\" /><text x=\"276.84199584199587\" y=\"555.0\" class=\"major\">100</text></g><g class=\"guides\"><path d=\"M329.856549 0.000000 v540.000000\" class=\"guide line\" /><text x=\"329.85654885654884\" y=\"555.0\" class=\"\">120</text></g><g class=\"guides\"><path d=\"M382.871102 0.000000 v540.000000\" class=\"guide line\" /><text x=\"382.87110187110187\" y=\"555.0\" class=\"\">140</text></g><g class=\"guides\"><path d=\"M435.885655 0.000000 v540.000000\" class=\"guide line\" /><text x=\"435.8856548856549\" y=\"555.0\" class=\"\">160</text></g><g class=\"guides\"><path d=\"M488.900208 0.000000 v540.000000\" class=\"guide line\" /><text x=\"488.90020790020793\" y=\"555.0\" class=\"\">180</text></g><g class=\"guides\"><path d=\"M541.914761 0.000000 v540.000000\" class=\"major guide line\" /><text x=\"541.9147609147609\" y=\"555.0\" class=\"major\">200</text></g><g class=\"guides\"><path d=\"M594.929314 0.000000 v540.000000\" class=\"guide line\" /><text x=\"594.9293139293139\" y=\"555.0\" class=\"\">220</text></g></g><g class=\"series serie-4 color-4\"><g class=\"bars\"><g class=\"bar\"><rect x=\"11.76923076923077\" y=\"412.56000000000006\" rx=\"0\" ry=\"0\" width=\"2.650727650727651\" height=\"80.41846153846153\" class=\"rect reactive tooltip-trigger\" /><desc class=\"value\">1</desc><desc class=\"x centered\">13.094594594594597</desc><desc class=\"y centered\">452.76923076923083</desc></g></g></g><g class=\"series serie-3 color-3\"><g class=\"bars\"><g class=\"bar\"><rect x=\"11.76923076923077\" y=\"321.1753846153847\" rx=\"0\" ry=\"0\" width=\"10.602910602910605\" height=\"80.41846153846153\" class=\"rect reactive tooltip-trigger\" /><desc class=\"value\">4</desc><desc class=\"x centered\">17.070686070686072</desc><desc class=\"y centered\">361.3846153846155</desc></g></g></g><g class=\"series serie-2 color-2\"><g class=\"bars\"><g class=\"bar\"><rect x=\"11.769230769230774\" y=\"229.79076923076929\" rx=\"0\" ry=\"0\" width=\"53.014553014553016\" height=\"80.41846153846153\" class=\"rect reactive tooltip-trigger\" /><desc class=\"value\">20</desc><desc class=\"x centered\">38.27650727650728</desc><desc class=\"y centered\">270.00000000000006</desc></g></g></g><g class=\"series serie-1 color-1\"><g class=\"bars\"><g class=\"bar\"><rect x=\"11.769230769230774\" y=\"138.40615384615393\" rx=\"0\" ry=\"0\" width=\"254.46985446985445\" height=\"80.41846153846153\" class=\"rect reactive tooltip-trigger\" /><desc class=\"value\">96</desc><desc class=\"x centered\">139.004158004158</desc><desc class=\"y centered\">178.6153846153847</desc></g></g></g><g class=\"series serie-0 color-0\"><g class=\"bars\"><g class=\"bar\"><rect x=\"11.769230769230717\" y=\"47.02153846153857\" rx=\"0\" ry=\"0\" width=\"588.4615384615386\" height=\"80.41846153846153\" class=\"rect reactive tooltip-trigger\" /><desc class=\"value\">222</desc><desc class=\"x centered\">306.0</desc><desc class=\"y centered\">87.23076923076934</desc></g></g></g></g><g class=\"titles\" /><g transform=\"translate(168, 20)\" class=\"plot overlay\"><g class=\"series serie-4 color-4\" /><g class=\"series serie-3 color-3\" /><g class=\"series serie-2 color-2\" /><g class=\"series serie-1 color-1\" /><g class=\"series serie-0 color-0\" /></g><g transform=\"translate(168, 20)\" class=\"plot text-overlay\"><g class=\"series serie-4 color-4\" /><g class=\"series serie-3 color-3\" /><g class=\"series serie-2 color-2\" /><g class=\"series serie-1 color-1\" /><g class=\"series serie-0 color-0\" /></g><g transform=\"translate(168, 20)\" class=\"plot tooltip-overlay\"><g transform=\"translate(0 0)\" style=\"opacity: 0\" class=\"tooltip\"><rect rx=\"0\" ry=\"0\" width=\"0\" height=\"0\" class=\"tooltip-box\" /><g class=\"text\" /></g></g><g transform=\"translate(10, 30)\" class=\"legends\"><g id=\"activate-serie-0\" class=\"legend reactive activate-serie\"><rect x=\"0.0\" y=\"1.0\" width=\"12\" height=\"12\" class=\"color-0 reactive\" /><text x=\"17.0\" y=\"11.2\">Liberal/Libéral</text></g><g id=\"activate-serie-1\" class=\"legend reactive activate-serie\"><rect x=\"0.0\" y=\"22.0\" width=\"12\" height=\"12\" class=\"color-1 reactive\" /><text x=\"17.0\" y=\"32.2\">Conservative/C…</text><title>Conservative/Conservateur</title></g><g id=\"activate-serie-2\" class=\"legend reactive activate-serie\"><rect x=\"0.0\" y=\"43.0\" width=\"12\" height=\"12\" class=\"color-2 reactive\" /><text x=\"17.0\" y=\"53.2\">Bloc Québécois…</text><title>Bloc Québécois/Bloc Québécois</title></g><g id=\"activate-serie-3\" class=\"legend reactive activate-serie\"><rect x=\"0.0\" y=\"64.0\" width=\"12\" height=\"12\" class=\"color-3 reactive\" /><text x=\"17.0\" y=\"74.2\">NDP-New Democr…</text><title>NDP-New Democratic Party/NPD-Nouveau Parti démocratique</title></g><g id=\"activate-serie-4\" class=\"legend reactive activate-serie\"><rect x=\"0.0\" y=\"85.0\" width=\"12\" height=\"12\" class=\"color-4 reactive\" /><text x=\"17.0\" y=\"95.2\">Green Party/Pa…</text><title>Green Party/Parti Vert</title></g></g><g transform=\"translate(790, 30)\" class=\"legends\" /></g></svg>",
+      "attrs": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_504is1m",
+      "fromNode": "node_st7pbe9",
+      "fromSocket": 0,
+      "toNode": "node_6yle5fv",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_7d9avqh",
+      "fromNode": "node_st7pbe9",
+      "fromSocket": 0,
+      "toNode": "node_flqsf2w",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_n3rid6k",
+      "fromNode": "node_xayqf5e",
+      "fromSocket": 0,
+      "toNode": "node_flqsf2w",
+      "toSocket": 1
+    },
+    {
+      "id": "edge_wlzaqhw",
+      "fromNode": "node_yhqba1c",
+      "fromSocket": 0,
+      "toNode": "node_flqsf2w",
+      "toSocket": 2
+    },
+    {
+      "id": "edge_iq4xqut",
+      "fromNode": "node_awc7sfg",
+      "fromSocket": 0,
+      "toNode": "node_flqsf2w",
+      "toSocket": 3
+    },
+    {
+      "id": "edge_hzx92xz",
+      "fromNode": "node_flqsf2w",
+      "fromSocket": 0,
+      "toNode": "node_f96vo0s",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_zyaj2h7",
+      "fromNode": "node_f96vo0s",
+      "fromSocket": 0,
+      "toNode": "node_jux8w2j",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_59kuss1",
+      "fromNode": "node_6yle5fv",
+      "fromSocket": 0,
+      "toNode": "node_b2n9tl8",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_u68y0qn",
+      "fromNode": "node_jux8w2j",
+      "fromSocket": 0,
+      "toNode": "node_ys24ibo",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_2gogdwr",
+      "fromNode": "node_b2n9tl8",
+      "fromSocket": 0,
+      "toNode": "node_9a7ur5u",
+      "toSocket": 0
+    },
+    {
+      "id": "edge_dk3rzqv",
+      "fromNode": "node_jux8w2j",
+      "fromSocket": 0,
+      "toNode": "node_vjly9wc",
+      "toSocket": 0
+    }
+  ]
+}
