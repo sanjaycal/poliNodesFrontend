@@ -2,10 +2,23 @@
     import { graphState } from "$lib/state.svelte";
     import { NODE_TYPES_CONFIG } from "$lib/types";
     import NodeEditor from "$lib/components/NodeEditor.svelte";
+    import { onMount } from "svelte";
+    import defaultGraph from "$lib/default.json";
 
     let isComputing = $state(false);
     let showAddMenu = $state(false);
     let expandedCategory = $state<string | null>(null);
+
+    onMount(() => {
+        if (graphState.nodes.length === 0 && defaultGraph) {
+            graphState.nodes = (defaultGraph.nodes || []) as any;
+            graphState.edges = (defaultGraph.edges || []) as any;
+            // Use setTimeout to allow the UI to render the nodes first before running
+            setTimeout(() => {
+                triggerRun();
+            }, 50);
+        }
+    });
 
     const nodeCategories = {
         Inputs: [
